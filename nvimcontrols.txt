@@ -1,0 +1,244 @@
+NEOVIM CONTROLS CUSTOM
+
+In terminal, cd to directory, type "nvim ." to open directory listing: Type % to create a file or d to create a new directory
+
+
+***COMMANDS/MODES***
+:Sex! - Open file tree
+esc - exit mode
+R - replace mode
+v - visual mode
+V - visual line mode
+<C-v> - visual block mode
+i - insert mode
+: - command mode
+c - command line editing
+:q - quit
+:w - write
+:wq - write and quit
+:q! - quit w/o saving
+:qa!<Enter> - Exit vim without saving
+/{pattern} - search for string
+   -n/N - jump to next/previous match of search
+?{pattern} - search for pattern vertically
+   - n/N - same thing
+* (use asterisk on continuous word) - searches for continuous word instead of typing in manually
+
+# (word) - essentially ?
+
+***EDITING***
+q (value) i (type anything) q - records whatever you type
+@ (value) - pastes the thing you recorded
+<C-c> - clear (clears command line or clears line)
+{visual mode} y - yank/copy in visual mode
+yy - copy line
+p - paste text last yanked or deleted after cursor
+P - paste text last yankde or deleted before cursor
+a - moves cursor after cursor
+i - inserts before cursor
+I - insert at beginning of current line
+A - insert at end of current line
+o - insert new line below current line
+O - insert new line above current line
+r - replace character under cursor
+R - Enter replace mode
+u - undo
+<C-r> - redo
+x - Delete Character under cursor
+X - Delete character before cursor
+> - Indent current line
+< - Unindent current line
+== - Auto-indent current line
+=% - Auto-indent block
+
+
+
+d <left/right/up/down>- deletes left/right of selected character or deletes entire line and above/below
+dd - Delete current line
+
+s - deletes [count] characers and starts insert
+
+
+***NAVIGATION***
+hjkl - movement
+  - Can type 6k to go up 6 lines, etc
+w - move to beginning of next word
+W - move until whitespace
+b - move to beginning of previous word
+B - move backwards until whitespace
+gg - move to beginning of file
+G - move to end of file
+{number}G - move to specified line number
+:{line number} - move to specified line number
+
+:e {file name} - Open specified file
+:ls - List all open files
+:b {buffer number} - Switch to specified buffer/file
+:bd - Close current buffer
+zz - center cursor
+
+
+***WINDOWS***
+<C-w>w - Jump through windows in cycle
+<C-w> + h/j/k/l - Jump through windows left/below/above/right of current window respectively
+:split - Split window horizontally
+:vsplit - Split window vertically
+:q - Closes current window
+
+
+***TABS***
+:tabnew - Opens new tab
+gt - Move to next tab
+gT - Move to previous tab
+{tab number}gt - Move to specified tab number
+:tabclose - Close current tab
+
+***CUSTOM***
+in file exploring neovim, press <leader>v/s to open up file/location into vertical/horizontal window
+
+"v" gc - Comment out lines
+gcc - comment out single line
+gc #j/k - comment out from cursor to # down/up
+
+"n" <C-p> - While in normal mode, open git files
+<leader>pv - go back
+<leader>pf - project find
+<leader>ps - string find in different files
+<leader>u - undo tree
+<leader>a - add to quick jump files
+<C-e> - open quick jump files
+<C -h/t/n/s> - open 1/2/3/4 quick jump files
+<C-d> - Half page jump down
+<C-u> - Half page jump up
+/<"word"><Enter> then press n/N - Keeps cursor in middle while searching for word
+
+<leader>p - Deletes highlighted word and pastes saved word without losing save
+
+<leader>y + ap- Copy paragraph to system clipboard
+
+<leader>y or Y - Yank and copy to system clipboard
+
+<leader>d - quick delete
+<leader>s - replace all selected word
+<leader>x - turns file to executable
+
+<C-c> basically means <esc>
+
+LSP AUTOCOMPLETE!!!
+<C-y> confirm
+<Up>/<Down> Scroll through autocomplete
+<C-n> Scroll next through and autocomplete
+<C-p> Scroll previous and autocomplete
+
+LSP Definitions
+K - Hover Definitions
+gd - goto original function Definitions
+gi - goto original function implementation
+<F2> - rename function in all files
+gr - find all references of function
+gs - signature help
+
+FOR MORE GO TO:
+https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/lsp.md
+
+:lua tokyoNight() - Tokyo Night Scheme
+:lua kana() - kanagawa-wave scheme
+:lua gruvdark() - gruvdark scheme
+
+<leader>gs - Git file finder
+
+When highlighting text, press: J or K to move them up/down. Will move into if statement
+
+DOES NOT WORK <C-f> project find
+<C-k> - quickfix?
+<C-j> - quickfix?
+<leader>k/j - quickfix?
+
+
+COMMANDS -
+Command, count, motion
+***MOTIONS***
+HORIONTAL
+f (character) - forward to chosen character
+F (character) - backwards to chosen character
+f (character) ,/; - continuously go forward/backwards to chosen character
+t (character) - Up to character
+T (character) - Back to character
+$ - Go to line last character
+_ - Go to line first character
+0 - Go to beginning of line
+
+w - Go word forward
+b - Go word backwards
+I - Insert at beginning
+A - Insert at end
+O - Newline above insert
+o - newline below insert
+
+<C-o> or <C-i> - Jump to previous/next cursor position
+
+(Insert mode) <C-o> (number amount) (char to insert) <esc> - Insert num amount of char
+
+EDITTING
+vi (/{/b - Select all within () or {}
+va (/{/b - Select all within () or {} including braces
+yi (/{/b - Yank all within () or {} without braces
+ya (/{/b - with braces
+da, ca, so on
+c - delete then enter insert mode
+viw - Select word cursor is on
+yiw - Yank word
+yiW - Yank continuous word
+<leader>p - pastes without losing original paste
+
+command ap - does command to entire continuous lines
+=ap - align whitespace of paragraph
+
+% - Jump from bracket to close bracket
+
+VERTICAL
+<C-v> - Vertical line edit
+{} - Move by paragraph down/up
+[] - Move to end of function down/up
+zz - Centers cursor
+gg - Go to top of file
+G - go to bottom of file
+<C-d> - Half page down
+<C-u> - Half page up
+o (visual mode) - move to beginning / end of visual blocks
+
+<C-v> I (input) <C-c> - Allows multi line editing of inserting input
+<C-a> - increment number
+<C-v> <C-a> - increment vertically and in succession
+	ex:
+	0 -> 1
+	0 -> 2
+	0 -> 3
+
+
+
+VIM MULTI LINE PLUGIN
+<C-n> (normal mode) - Select word
+n/N - next/previous occurrence
+[/] - next/previous cursor
+q - skip current and go to next cursor
+Q - remove current cursor
+i, a, I, A - start insert mode
+
+<tab> - Switch between cursor and extend mode
+	-Cursor mode is essentially normal mode
+	-Extend mode is essentially visual mode
+
+
+
+NVIM SURROUND
+ys (motion) (bracket or quotes) - surrounds motion with bracket/quote. EX: hello (ysw") --> "hello"
+ys (motion) (bracket/quote) (b/q) - surrounds motion of previous b/q with current b/q
+	- "hello" (ysa"() --> ("hello")
+(visual mode) (selected word) S (bracket/quotes) - surrounds selected word with b/q
+ds (b/q) - delete surrounding b/q
+cs (old b/q) (new b/q) - replaces old delimiter with new delimiter
+(surround motion)t (delimiter) - surrounds motion with HTML Tags named (delimiter)
+(surround motion)f (delimiter) - surrounds motion with function named (delimiter)
+BEST TO DO AT BEGINNING OF WORD BECAUSE WEIRD IF NOT
+
