@@ -44,7 +44,7 @@ return require('packer').startup(function(use)
     {'L3MON4D3/LuaSnip'},
   }
 }
---Comment PLugin
+--Comments
  use {
     'numToStr/Comment.nvim',
     config = function()
@@ -53,5 +53,17 @@ return require('packer').startup(function(use)
  }
 --colorscheme
 use { "ellisonleao/gruvbox.nvim" }
-
+--multi line
+use { "mg979/vim-visual-multi" }
+-- surround bracket shortcut
+use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
 end)
+
