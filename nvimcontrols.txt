@@ -242,3 +242,13 @@ cs (old b/q) (new b/q) - replaces old delimiter with new delimiter
 (surround motion)f (delimiter) - surrounds motion with function named (delimiter)
 BEST TO DO AT BEGINNING OF WORD BECAUSE WEIRD IF NOT
 
+NVIM Tabline
+<A-,>/<A-.> - Jump to previous/next tab
+<A-c> - close tab
+<A-1-9> - Jump through 1-9 tabs
+<A-p> - pin/unpin tab
+<A-</>> - Move tab left/right
+<leader>bb - Order tabs by buffer number
+<leader>bd - Order by directory
+<leader>bl - Order by language
+<leader>bw - Order by window number
