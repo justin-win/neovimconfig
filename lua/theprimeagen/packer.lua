@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
+--tmux navigator
+use {'christoomey/vim-tmux-navigator'}
  --colorscheme
  use {'folke/tokyonight.nvim'}
  --text highlighter
