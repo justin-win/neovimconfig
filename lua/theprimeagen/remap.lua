@@ -53,6 +53,7 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 
 end)
+--Tab control plugin
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
