@@ -51,6 +51,13 @@ return require('packer').startup(function(use)
         require('Comment').setup()
     end
  }
+--nerdfont
+use({'glepnir/nerdicons.nvim', cmd = 'NerdIcons', config = function() require('nerdicons').setup({}) end})
+--lualine status line
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
 --colorscheme
 use { "ellisonleao/gruvbox.nvim" }
 --multi line
