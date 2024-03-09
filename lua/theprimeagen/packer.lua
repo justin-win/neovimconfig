@@ -14,9 +14,10 @@ return require('packer').startup(function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
 }
  --colorscheme
-  use {'folke/tokyonight.nvim'}
+ use {'folke/tokyonight.nvim'}
  --text highlighter
  use {'nvim-treesitter/nvim-treesitter', {run='TSUpdate'}}
+ use {"sopa0/telescope-makefile"}
  --colorscheme
  use {'rebelot/kanagawa.nvim'}
  --plugin window viewer
