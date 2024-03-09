@@ -60,6 +60,8 @@ use {
 }
 --colorscheme
 use { "ellisonleao/gruvbox.nvim" }
+use { "catppuccin/nvim", as = "catppuccin" }
+use { "craftzdog/solarized-osaka.nvim" }
 --multi line
 use { "mg979/vim-visual-multi" }
 -- surround bracket shortcut
