@@ -107,7 +107,7 @@ gc #j/k - comment out from cursor to # down/up
 <leader>u - undo tree
 <leader>a - add to quick jump files
 <C-e> - open quick jump files
-<C -h/t/n/s> - open 1/2/3/4 quick jump files
+<leader>h/t/n/w - open 1/2/3/4 quick jump files
 <C-d> - Half page jump down
 <C-u> - Half page jump up
 /<"word"><Enter> then press n/N - Keeps cursor in middle while searching for word
@@ -253,3 +253,15 @@ NVIM Tabline
 <leader>bd - Order by directory
 <leader>bl - Order by language
 <leader>bw - Order by window number
+
+TMUX
+<C-a>s - opens session manager
+<C-a>d - detach session
+<C-a>% - Split terminal vertically
+<C-a>" - Split horizontally
+<C-a>r - source .tmux.conf file
+<C-a> up/down/left/right - Navigate through panes
+<C-a>m - Maximize pane
+<C-a>x - Close pane
+TMUX VIM PLUGIN
+<C-h/j/k/l> - Navigate through panes using vim motions
