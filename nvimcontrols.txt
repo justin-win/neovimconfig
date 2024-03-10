@@ -1,5 +1,8 @@
 NEOVIM CONTROLS CUSTOM
 
+**CHANGES
+	-Harpoon now <leader>t/h/n/s
+	-
 In terminal, cd to directory, type "nvim ." to open directory listing: Type % to create a file or d to create a new directory
 
 
@@ -254,14 +257,49 @@ NVIM Tabline
 <leader>bl - Order by language
 <leader>bw - Order by window number
 
-TMUX
+TMUX -
+SESSIONS
+in terminal: tmux new -s (session name) - create new session
+$ tmux a - attach to last session
+tmux a -t (name) - attach to session (name)
+<C-b>(/) - Move prev/next session
+<C-b>$ - Rename Session
+<C-a>:kill-session (name) - Kills session (name)
 <C-a>s - opens session manager
 <C-a>d - detach session
 <C-a>% - Split terminal vertically
 <C-a>" - Split horizontally
 <C-a>r - source .tmux.conf file
+WINDOWS
+<C-a>c - Create a window within session
+<C-a>w - Open window manager
+<C-a>n/p OR 0-9 - Jump to next/prev windows OR windows 0-9
+<C-a>, - Rename window
+<C-a>l - Toggle last active window
+<C-a>& - Close window
+PANES
 <C-a> up/down/left/right - Navigate through panes
+	-Use vim plugin <C-h/j/k/l>
+<C-a>h/j/k/l - Resize current panes to left/down/up/right
 <C-a>m - Maximize pane
 <C-a>x - Close pane
+<C-a>; - Toggle last active panel
+<C-a>-/| - Split current pane horizontally/vertically
+<C-a><leader> - Toggle between pane layouts
+<C-a>{/} - Move pane left/right
+COPY MODE
+<C-a>[ - Enter copy mode
+:setw -g mode-keys vi - Use vi motions
+q - quit
+g - goto top line
+G - goto bottom
+h/j/k/l - vi motions
+w/b - move forwards/backwards 1 word at a time
+/ or ? - search forward/backwards
+	-n/N - next/prev occurrence
+<leader> - Start selection
+<esc> - Clear selection
+<CR> - Copy Selection
+<C-a>] - Paste contents
 TMUX VIM PLUGIN
 <C-h/j/k/l> - Navigate through panes using vim motions
