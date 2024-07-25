@@ -75,6 +75,11 @@ use({
         })
     end
 })
+--jdtls
+use 'mfussenegger/nvim-jdtls'
+--tmux navigator
+use 'christoomey/vim-tmux-navigator'
+use 'alexghergh/nvim-tmux-navigation'
 --tab lines
 -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
 use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
