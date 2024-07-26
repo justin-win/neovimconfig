@@ -65,7 +65,7 @@
 -- setup must be called before loading
 -- vim.cmd.colorscheme "catppuccin"
 
-vim.cmd("colorscheme kanagawa-wave")
+vim.cmd([[colorscheme gruvbox]])
 function cat()
     vim.cmd[[colorscheme catppuccin]]
 end
