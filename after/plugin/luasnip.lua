@@ -24,6 +24,21 @@ vim.keymap.set({"i", "s"}, "<C-E>", function()
 		ls.change_choice(1)
 	end
 end, {silent = true})
+ls.add_snippets("javascript", {
+    s("fn", fmt(
+    [[
+    local {} = function({}) {{
+        {}
+    }}
+    ]],
+    {
+        i(1, "myFunc"),
+        i(2, "params"),
+        i(3, "//Code Goes Here")
+    }
+    ))
+
+})
 
 ls.add_snippets("html", {
     s("html:5", fmt(
