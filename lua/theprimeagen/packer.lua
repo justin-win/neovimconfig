@@ -52,6 +52,29 @@ return require('packer').startup(function(use)
         require('Comment').setup()
     end
  }
+--webdev
+--autoclose tags
+use {'windwp/nvim-ts-autotag'}
+--auto pair
+use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+        require("nvim-autopairs").setup {}
+    end
+}
+--snippets
+use "rafamadriz/friendly-snippets"
+--snippet dependency
+use({
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!:).
+	run = "make install_jsregexp"
+})
+
+
 --nerdfont
 use({'glepnir/nerdicons.nvim', cmd = 'NerdIcons', config = function() require('nerdicons').setup({}) end})
 --lualine status line
