@@ -63,22 +63,40 @@
 -- })
 
 -- setup must be called before loading
--- vim.cmd.colorscheme "catppuccin"
+-- vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "rose-pine-main"
 
-vim.cmd([[colorscheme gruvbox]])
 function cat()
-    vim.cmd[[colorscheme catppuccin]]
+    vim.cmd[[colorscheme catppuccin-mocha]]
+    --mocha, macchiato, frappe
 end
 function tokyoNight()
-    vim.cmd[[colorscheme tokyonight-night]]
+    vim.cmd[[colorscheme tokyonight-moon]]
+    --moon, storm, night
 end
 
-function kana()
+function kanalight()
+    vim.cmd("colorscheme kanagawa-lotus")
+    --wave, dragon, lotus
+end
+function kanadark()
     vim.cmd("colorscheme kanagawa-wave")
 end
 
 function gruvdark()
     vim.o.background = "dark"
+    --dark or light
     vim.cmd([[colorscheme gruvbox]])
 end
+function gruvlight()
+    vim.o.background = "light"
+    --dark or light
+    vim.cmd([[colorscheme gruvbox]])
+end
+
+function rosepine()
+    vim.cmd.colorscheme "rose-pine-main"
+    --main, moon, dawn
+end
+
 

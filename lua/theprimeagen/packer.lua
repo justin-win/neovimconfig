@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
+--colorscheme
+use { "rose-pine/neovim", name = "rose-pine" }
  --colorscheme
  use {'folke/tokyonight.nvim'}
  --text highlighter
@@ -108,5 +110,7 @@ use 'alexghergh/nvim-tmux-navigation'
 use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
 use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
 use 'romgrk/barbar.nvim'
+--snipe.nvim
+use "leath-dub/snipe.nvim"
 end)
 

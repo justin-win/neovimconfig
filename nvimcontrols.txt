@@ -230,6 +230,59 @@ o (visual mode) - move to beginning / end of visual blocks
 	0 -> 2
 	0 -> 3
 
+width: 10
+height: 50
+top: 60
+
+
+
+VIM REGEX
+
+Vim     Explanation
+-------------------
+x\=     Match 0 or 1 of x
+x\+     Match 1 or more of x
+\(xyz\) Use brackets to group matches
+x\{n,m} Match n to m of x
+x\{-}   Match 0 or 1 of x, non-greedy
+x\{-1,} Match 1 or more of x, non-greedy
+\< \>   Word boundaries
+\n      n is a number; Backreferences for previously grouped matches
+\c      Insensitive match
+\C      Sensitive match
+--------------------------
+%s - select all file
+\w - word
+\d - digit
+\s - space between words
++ - quantifier: one or more of preceding element
+    -ex: (\w+)
+
+{number} - quantifier: number amount of preceding element
+    -ex: abcdefg -> :s/\([a-z]\{4}\) -> abcd
+
+* - everything after preceding element
+. - wildcard: matches any char except newline
+
+[xyz] - character class; matches everything in the class
+\(\) - capture group; text inside is matched and can be referenced later
+    -best to use \(word\) to match for word in capture group
+    -when adding + do \(word\+\): add multiple \
+    -(\d{3}) - captures the first 3 digits
+
+word\(.*\) - select everything after word
+[^xyz] - matches everything excluding xyz
+ex:
+    vim.keymap.set(test(), test())
+    -'<, '>s/^[^(]*/
+        ^ - start at begining of line, can be replaced with choice of match
+        [^(]* - match everything excluding ( onwards
+    select this entire line
+    -:s select.*
+    or
+    -:s select\(.*\)
+
+
 
 
 VIM MULTI LINE PLUGIN
@@ -278,6 +331,9 @@ NVIM SNIPPETS
     <leader><leader>s - source luasnip
 watch this for reference
 https://www.youtube.com/watch?v=FmHhonPjvvA
+
+NVIM Snipe
+    <A-b> to toggle buffer selection
 
 NVIM Tabline
 <A-,>/<A-.> - Jump to previous/next tab
