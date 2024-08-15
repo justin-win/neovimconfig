@@ -5,6 +5,19 @@ NEOVIM CONTROLS CUSTOM
 	-
 In terminal, cd to directory, type "nvim ." to open directory listing: Type % to create a file or d to create a new directory
 
+***OBSIDIAN
+
+
+
+
+
+
+
+
+
+
+
+
 
 ***COMMANDS/MODES***
 :Sex! - Open file tree
@@ -238,6 +251,9 @@ top: 60
 
 VIM REGEX
 
+REQUIRES ALL CONTROL CHARACTERS TO BE SEPARATED BY \
+ex: :%s/\d\{4}\s\+/
+        ^ ^   ^ ^
 Vim     Explanation
 -------------------
 x\=     Match 0 or 1 of x
@@ -250,6 +266,11 @@ x\{-1,} Match 1 or more of x, non-greedy
 \n      n is a number; Backreferences for previously grouped matches
 \c      Insensitive match
 \C      Sensitive match
+\?      Character before could or not be behind: \d{5} ([\-]\d{4})?
+            -can be 12345 or 12345-1234
+            12345-1234
+\v      Very magic: Allows regex without \ separation
+\V      Enables regex with \ separation
 --------------------------
 %s - select all file
 \w - word

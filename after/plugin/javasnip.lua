@@ -42,6 +42,10 @@ ls.add_snippets("java", {
             {}
         }}
     ]], {
+        --updates the description automatically
+        --function node: splits the params into an table (array of arrays)
+        --loops through it and appends @param
+        --returns the entire table
         f(function(import_name)
             local parts = vim.split(import_name[1][1], ", ", true)
             local annotated_parts = {}
@@ -49,8 +53,7 @@ ls.add_snippets("java", {
                 table.insert(annotated_parts, " * @param " .. part)
             end
             return annotated_parts;
-            -- return parts or ""
-        end, {4}),
+        end, {4}), --taking input from i(4, "params")
         rep(2),
         c(1, {
             t("public"),

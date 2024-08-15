@@ -32,7 +32,7 @@ ls.add_snippets("javascript", {
         ]], {i(1, "myFunc"), i(2, "params"), i(3, "//Code goes here")}))
     })),
 
-    s("query", fmt(
+    s("dqs", fmt(
     [[
     {} {} = document.querySelector('{}');
     ]],
@@ -45,7 +45,13 @@ ls.add_snippets("javascript", {
         i(3, "doc")
     }
     )),
-    s("addEvent", fmt([[
+    s("dcc", fmt([[
+    const {} = document.createElement('{}');
+    ]], {
+        i(1, "name"),
+        i(2, "type")
+    })),
+    s("ael", fmt([[
     {}.addEventListener('{}', {});
     ]], {
         i(1, "name"),
@@ -55,7 +61,6 @@ ls.add_snippets("javascript", {
             --TODO more
         }),
         c(3, {
-            t("() => {}"),
             sn(nil, fmt([[
             ({}) => {{
                 {}
