@@ -8,6 +8,10 @@ require("obsidian").setup(
   -- current markdown file being edited.
   workspaces = {
     {
+        name = "school",
+        path = "~/vaults/school"
+    },
+    {
       name = "personal",
       path = "~/vaults/personal",
     },
@@ -17,6 +21,7 @@ require("obsidian").setup(
       -- Optional, override certain settings.
       overrides = {
         notes_subdir = "notes",
+        subdir = "templates"
       },
     },
   },
@@ -43,8 +48,7 @@ require("obsidian").setup(
     default_tags = { "daily-notes" },
     -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
     template = nil
-  },
-
+},
   -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
   completion = {
     -- Set to false to disable completion.
@@ -82,7 +86,7 @@ require("obsidian").setup(
   -- Where to put new notes. Valid options are
   --  * "current_dir" - put new notes in same directory as the current buffer.
   --  * "notes_subdir" - put new notes in the default notes subdirectory.
-  new_notes_location = "notes_subdir",
+  new_notes_location = "current_dir",
 
   -- Optional, customize how note IDs are generated given an optional title.
   ---@param title string|?
@@ -170,8 +174,8 @@ require("obsidian").setup(
   ---@param url string
   follow_url_func = function(url)
     -- Open the URL in the default web browser.
-    vim.fn.jobstart({"open", url})  -- Mac OS
-    -- vim.fn.jobstart({"xdg-open", url})  -- linux
+    -- vim.fn.jobstart({"open", url})  -- Mac OS
+    vim.fn.jobstart({"xdg-open", url})  -- linux
     -- vim.cmd(':silent exec "!start ' .. url .. '"') -- Windows
     -- vim.ui.open(url) -- need Neovim 0.10.0+
   end,

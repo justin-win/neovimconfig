@@ -6,17 +6,17 @@ NEOVIM CONTROLS CUSTOM
 In terminal, cd to directory, type "nvim ." to open directory listing: Type % to create a file or d to create a new directory
 
 ***OBSIDIAN
-
-
-
-
-
-
-
-
-
-
-
+"<leader>oc" - Checkbox
+"<leader>ot" - Template
+"<leader>oo" - Open in Obsidian App
+"<leader>ob" - Show Backlinks
+"<leader>ol" - Show links
+"<leader>on" - Create new note
+"<leader>os" - Search obsidian
+"<leader>oq" - Quick switch
+"<leader>ow" - Swap workspaces
+<CR> on links to jump to them
+<CR> to check box
 
 
 ***COMMANDS/MODES***
@@ -284,6 +284,8 @@ x\{-1,} Match 1 or more of x, non-greedy
 
 * - everything after preceding element
 . - wildcard: matches any char except newline
+^ - either beginning of line or not including something
+$ - end of line
 
 [xyz] - character class; matches everything in the class
 \(\) - capture group; text inside is matched and can be referenced later

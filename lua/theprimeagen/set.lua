@@ -30,3 +30,5 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+--obsidian
+vim.opt.conceallevel = 2;
