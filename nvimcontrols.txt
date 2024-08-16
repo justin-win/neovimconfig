@@ -15,8 +15,13 @@ In terminal, cd to directory, type "nvim ." to open directory listing: Type % to
 "<leader>os" - Search obsidian
 "<leader>oq" - Quick switch
 "<leader>ow" - Swap workspaces
+"<leader>oa" - TOC
 <CR> on links to jump to them
 <CR> to check box
+
+***OBSIDIAN BRIDGE
+NOT IN USE BECAUSE BUGGY MESS RN
+<leader>og - Open graph
 
 
 ***COMMANDS/MODES***

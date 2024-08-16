@@ -112,3 +112,7 @@ vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<CR>", { desc = "Create New N
 vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<CR>", { desc = "Search Obsidian" })
 vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Quick Switch" })
 vim.keymap.set("n", "<leader>ow", "<cmd>ObsidianWorkspace<CR>", { desc = "Swap workspaces" })
+vim.keymap.set("n", "<leader>oa", "<cmd>ObsidianTOC<CR>", { desc = "Table of Contents" })
+
+--ObsidianBridge: TOO MANY ISSUES WILL WAIT
+-- vim.keymap.set("n", "<leader>og", "<cmd>ObsidianBridgeOpenGraph<CR>", { desc = "Open Obsidian Graph" })

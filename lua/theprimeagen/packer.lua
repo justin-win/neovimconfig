@@ -103,12 +103,37 @@ use({
   end,
 })
 
+--obsidian bridge
+--synced wikilinks in obsidian
+--REST API key stored in ~/.bashrc under OBSIDIAN
+-- use {
+--     'oflisback/obsidian-bridge.nvim',
+--     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+--     config = function() require('obsidian-bridge').setup(
+--         {
+--             "oflisback/obsidian-bridge.nvim",
+--             dependencies = { "nvim-telescope/telescope.nvim" },
+--             config = function() require("obsidian-bridge").setup({
+--                 obsidian_server_address = "https://127.0.0.1:27123/",
+--                 scroll_sync = true
+--             }) end,
+--             event = {
+--                 "BufReadPre *.md",
+--                 "BufNewFile *.md",
+--             },
+--         }
+--     ) end
+-- }
+use {
+    'oflisback/obsidian-bridge.nvim'
+}
+
 --nerdfont
 use({'glepnir/nerdicons.nvim', cmd = 'NerdIcons', config = function() require('nerdicons').setup({}) end})
 --lualine status line
 use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
 --colorscheme
 use { "ellisonleao/gruvbox.nvim" }
