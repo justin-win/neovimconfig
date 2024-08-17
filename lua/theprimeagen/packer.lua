@@ -102,6 +102,8 @@ use({
     })
   end,
 })
+--img clip nvim | Used for obsidian
+use {"HakonHarnes/img-clip.nvim"}
 
 --obsidian bridge
 --synced wikilinks in obsidian

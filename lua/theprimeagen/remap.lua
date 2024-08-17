@@ -114,5 +114,10 @@ vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Quic
 vim.keymap.set("n", "<leader>ow", "<cmd>ObsidianWorkspace<CR>", { desc = "Swap workspaces" })
 vim.keymap.set("n", "<leader>oa", "<cmd>ObsidianTOC<CR>", { desc = "Table of Contents" })
 
+
 --ObsidianBridge: TOO MANY ISSUES WILL WAIT
 -- vim.keymap.set("n", "<leader>og", "<cmd>ObsidianBridgeOpenGraph<CR>", { desc = "Open Obsidian Graph" })
+
+
+--img clip
+vim.keymap.set("n", "<leader>op", "<cmd>PasteImage<CR>", { desc = "Paste image" })

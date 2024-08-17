@@ -16,8 +16,11 @@ In terminal, cd to directory, type "nvim ." to open directory listing: Type % to
 "<leader>oq" - Quick switch
 "<leader>ow" - Swap workspaces
 "<leader>oa" - TOC
+"<leader>op" - Paste image
 <CR> on links to jump to them
 <CR> to check box
+:ObsidianTags [TAG ...] - Searches for tags
+:ObsidianExtractNote [TITLE] - Extracts visually selected item into new note of TITLE
 
 ***OBSIDIAN BRIDGE
 NOT IN USE BECAUSE BUGGY MESS RN
@@ -355,7 +358,7 @@ NVIM SNIPPETS
     <C-k> expands
     <C-l> jump forward to jump point snippet
     <C-j> jump back
-    <C-e> expands
+    <C-e> cycles
     <leader><leader>s - source luasnip
 watch this for reference
 https://www.youtube.com/watch?v=FmHhonPjvvA
